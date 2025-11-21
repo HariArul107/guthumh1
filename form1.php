@@ -30,7 +30,7 @@
             <span class="error" id="emailErr"></span>
 
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
+            <input type="tel" id="phone" name="phone" maxlength="10" required>
             <span class="error" id="phoneErr"></span>
             <label for="dob">Date of Birth:</label>
             <input type="date" id="dob" name="dob" required>
@@ -97,6 +97,17 @@
                                 return;
                             }
                         } catch (e) {
+                            $("#fnameErr").html('');
+
+                            
+                            $("#lnameErr").html('');
+                            $("#emailErr").html('');
+                            $("#phoneErr").html('');
+                            $("#dobErr").html('');
+                            $("#genderErr").html('');
+                            $("#yopErr").html('');
+                            $("#skillsErr").html('');
+                            $("#addressErr").html('');
                             $("#result").html(response);
                             $("form")[0].reset();
                         }

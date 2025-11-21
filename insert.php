@@ -21,7 +21,7 @@
        $sql="INSERT INTO students (name,  email, age) VALUES ('$name','$email','$age')";
        if($conn->query($sql) === TRUE){
          header("Location: fetch.php");
-          exit(); // always use exit after header redirect
+          exit(); 
        }else{
         echo "failed";
        }
